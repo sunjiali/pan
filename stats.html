@@ -45,31 +45,44 @@ function render(){
     "已加载 " + done + " / " + ENTRIES.length + " 条，链接点击合计 " + sum + " 次" +
     (typeof idx === "number" ? "；索引页访问 " + idx + " 次。" : "。");
 }
-function getOne(id, retry){
+/* Abacus 限速约 30 次/10 秒/IP：严格节流（最多 3 并发、启动间隔 ≥350ms），
+   失败进重试队列（退避 3s/8s，最多 3 次），避免整表一起被 429。 */
+function fetchValue(id){
   return fetch(API + encodeURIComponent(id)).then(function(r){
     if (!r.ok) throw new Error(r.status);
     return r.json();
   }).then(function(j){
-    results[id] = (typeof j.value === "number") ? j.value : null;
-  }).catch(function(){
-    if (!retry) return new Promise(function(res){ setTimeout(res, 1200); }).then(function(){ return getOne(id, true); });
-    results[id] = null;
+    if (typeof j.value !== "number") throw new Error("bad value");
+    return j.value;
   });
 }
 function loadAll(){
-  var i = 0;
-  function batch(){
-    var slice = ENTRIES.slice(i, i + 6); i += 6;
-    if (!slice.length) { render(); return; }
-    Promise.all(slice.map(function(e){ return getOne(e.id, false); })).then(function(){
-      render();
-      setTimeout(batch, 250);
-    });
+  var queue = ENTRIES.map(function(e){ return {id: e.id, tries: 0}; });
+  queue.push({id: "index-total", tries: 0, key: "__index"});
+  var inFlight = 0, lastStart = 0;
+  function pump(){
+    while (inFlight < 3 && queue.length){
+      var wait = Math.max(0, 350 - (Date.now() - lastStart));
+      if (wait > 0) { setTimeout(pump, wait); return; }
+      var item = queue.shift();
+      inFlight++; lastStart = Date.now();
+      (function(item){
+        fetchValue(item.id).then(function(v){
+          results[item.key || item.id] = v;
+        }).catch(function(){
+          item.tries++;
+          if (item.tries < 3) {
+            setTimeout(function(){ queue.push(item); pump(); }, item.tries === 1 ? 3000 : 8000);
+          } else {
+            results[item.key || item.id] = null;
+          }
+        }).then(function(){
+          inFlight--; render(); pump();
+        });
+      })(item);
+    }
   }
-  render(); batch();
-  fetch(API + "index-total").then(function(r){ return r.json(); }).then(function(j){
-    if (typeof j.value === "number") { results["__index"] = j.value; render(); }
-  }).catch(function(){});
+  render(); pump();
 }
 loadAll();
 </script>
