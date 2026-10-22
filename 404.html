@@ -3,68 +3,101 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>分享索引</title>
-<style>body{font-family:system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;margin:2em;line-height:1.7;color:#222;max-width:56em}a{color:#0b57d0}code{background:#f2f2f2;padding:.1em .35em;border-radius:4px;font-size:.9em}</style>
+<title>资源索引 · Robin</title>
+<meta name="description" content="Robin 的资源索引：AI 课程、搞钱玩法、影视与书籍合集，全部永久有效。">
+<style>
+:root{--bg:#F5F1E8;--ink:#16171A;--card:#FFFEF8;--matcha:#A6CF5F;--acid:#D9F24F;--mut:#6B675C;--line:#16171A}
+@media (prefers-color-scheme:dark){:root{--bg:#1C1B17;--ink:#EFE9DA;--card:#29271F;--mut:#A49E8E;--line:#EFE9DA}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif}
+.wrap{max-width:880px;margin:0 auto;padding:28px 16px 56px}
+header.top{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.logo{width:56px;height:56px;border:3px solid var(--line);border-radius:14px;background:var(--matcha);display:flex;align-items:center;justify-content:center;font-size:30px;box-shadow:4px 4px 0 var(--line)}
+h1{font-size:26px;margin:0;font-weight:900;letter-spacing:.5px}
+.sub{color:var(--mut);margin:4px 0 0;font-size:14px}
+.toolbar{position:sticky;top:0;background:var(--bg);padding:14px 0 10px;z-index:5}
+.search{width:100%;padding:12px 14px;font-size:16px;border:3px solid var(--line);border-radius:12px;background:var(--card);color:var(--ink);box-shadow:4px 4px 0 var(--line);outline:none}
+.search:focus{box-shadow:4px 4px 0 var(--matcha)}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.chip{border:2.5px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:5px 13px;font-size:13.5px;cursor:pointer;font-weight:700}
+.chip.on{background:var(--acid);color:#16171A}
+h2.cat{font-size:18px;margin:26px 0 10px;display:flex;align-items:center;gap:8px}
+h2.cat .n{font-size:12.5px;color:var(--mut);font-weight:600}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
+.card{border:3px solid var(--line);border-radius:14px;background:var(--card);padding:13px 14px;box-shadow:4px 4px 0 var(--line);display:flex;flex-direction:column;gap:10px}
+.card .name{font-weight:800;font-size:15.5px;line-height:1.45;word-break:break-word}
+.card .row{display:flex;gap:8px;margin-top:auto}
+.btn{flex:1;text-align:center;text-decoration:none;border:2.5px solid var(--line);border-radius:9px;padding:7px 0;font-size:13.5px;font-weight:800;color:#16171A;background:var(--matcha);cursor:pointer}
+.btn.copy{flex:0 0 86px;background:var(--card);color:var(--ink)}
+.btn:active{transform:translate(2px,2px)}
+.empty{display:none;text-align:center;color:var(--mut);padding:34px 0;font-size:15px}
+footer{margin-top:36px;color:var(--mut);font-size:13px;line-height:1.8}
+footer a{color:var(--ink);font-weight:700}
+#toast{position:fixed;left:50%;bottom:26px;transform:translateX(-50%) translateY(80px);background:var(--ink);color:var(--bg);padding:9px 20px;border-radius:999px;font-size:14px;font-weight:700;transition:transform .25s;z-index:9}
+#toast.show{transform:translateX(-50%) translateY(0)}
+</style>
 </head>
 <body>
-<h1>分享索引</h1>
-<p>个人分享索引：以下链接会跳转到对应的夸克网盘分享页。</p>
-<p><a href="stats.html">📊 查看点击统计</a></p>
-<ol>
-<li><a href="s/5984c9a429b4/">坏朋友</a> — <code>https://sunjiali.github.io/pan/s/5984c9a429b4</code></li>
-<li><a href="s/442b55df5410/">完美复制品（2026）美国</a> — <code>https://sunjiali.github.io/pan/s/442b55df5410</code></li>
-<li><a href="s/684716459942/">2026智能体从0到1系统学习课程</a> — <code>https://sunjiali.github.io/pan/s/684716459942</code></li>
-<li><a href="s/2d6064362cb6/">OpenClaw实战100个精品案例</a> — <code>https://sunjiali.github.io/pan/s/2d6064362cb6</code></li>
-<li><a href="s/8e349455bf5e/">Vibe Coding零基础AI编程实战课</a> — <code>https://sunjiali.github.io/pan/s/8e349455bf5e</code></li>
-<li><a href="s/541436d3f73c/">AI赋能职场重塑竞争力线上课</a> — <code>https://sunjiali.github.io/pan/s/541436d3f73c</code></li>
-<li><a href="s/fff3ae440b4c/">Autoware自动驾驶框架源码剖析与实践</a> — <code>https://sunjiali.github.io/pan/s/fff3ae440b4c</code></li>
-<li><a href="s/35ba85d668e5/">DK百科全书（560本）</a> — <code>https://sunjiali.github.io/pan/s/35ba85d668e5</code></li>
-<li><a href="s/79b32fb3837c/">DeepSeek+dify+ollama三剑客</a> — <code>https://sunjiali.github.io/pan/s/79b32fb3837c</code></li>
-<li><a href="s/e33574070dfe/">-完整整理-（尽快保存）</a> — <code>https://sunjiali.github.io/pan/s/e33574070dfe</code></li>
-<li><a href="s/68aa58075bfa/">[千里共良宵].2004~2020年.全集音频.终极珍藏</a> — <code>https://sunjiali.github.io/pan/s/68aa58075bfa</code></li>
-<li><a href="s/fcbf1f0a10ca/">《生财有术》2025年精华帖合集</a> — <code>https://sunjiali.github.io/pan/s/fcbf1f0a10ca</code></li>
-<li><a href="s/b785709a7caf/">擦边短剧合集</a> — <code>https://sunjiali.github.io/pan/s/b785709a7caf</code></li>
-<li><a href="s/4d01fbdd4857/">头条傻瓜式抄书玩法</a> — <code>https://sunjiali.github.io/pan/s/4d01fbdd4857</code></li>
-<li><a href="s/6697d76abc2d/">5分钟制作一条原创视频</a> — <code>https://sunjiali.github.io/pan/s/6697d76abc2d</code></li>
-<li><a href="s/46ab4ed43e18/">2027高中暑期班</a> — <code>https://sunjiali.github.io/pan/s/46ab4ed43e18</code></li>
-<li><a href="s/359fd9aae3ac/">B站网盘拉新美女玩法(1)</a> — <code>https://sunjiali.github.io/pan/s/359fd9aae3ac</code></li>
-<li><a href="s/f124c534a9ff/">零成本！中老年情感公众号</a> — <code>https://sunjiali.github.io/pan/s/f124c534a9ff</code></li>
-<li><a href="s/9c07858604fd/">闲鱼搬运神器，一键转卖、上架(1)</a> — <code>https://sunjiali.github.io/pan/s/9c07858604fd</code></li>
-<li><a href="s/da325c42742d/">小红书小众女粉项目</a> — <code>https://sunjiali.github.io/pan/s/da325c42742d</code></li>
-<li><a href="s/186c4b86e623/">小红书运营课</a> — <code>https://sunjiali.github.io/pan/s/186c4b86e623</code></li>
-<li><a href="s/b2a7156b90fa/">知乎推荐的13部神级纪录片</a> — <code>https://sunjiali.github.io/pan/s/b2a7156b90fa</code></li>
-<li><a href="s/c23c1895b7a6/">美国人每天说的话</a> — <code>https://sunjiali.github.io/pan/s/c23c1895b7a6</code></li>
-<li><a href="s/6272a0a53cd6/">中国318个5A级景区视频讲解+185个航拍</a> — <code>https://sunjiali.github.io/pan/s/6272a0a53cd6</code></li>
-<li><a href="s/ffdbd5b7e199/">剪映专业版剪辑学习教学课程</a> — <code>https://sunjiali.github.io/pan/s/ffdbd5b7e199</code></li>
-<li><a href="s/3f3534ac45e4/">（未命名）</a> — <code>https://sunjiali.github.io/pan/s/3f3534ac45e4</code></li>
-<li><a href="s/7c0fe5b14067/">potplayer</a> — <code>https://sunjiali.github.io/pan/s/7c0fe5b14067</code></li>
-<li><a href="s/8c0df96cc99b/">(101GB)全国各地地方志县志4000+本合集</a> — <code>https://sunjiali.github.io/pan/s/8c0df96cc99b</code></li>
-<li><a href="s/3c46a1623cbc/">风水绝版书110部</a> — <code>https://sunjiali.github.io/pan/s/3c46a1623cbc</code></li>
-<li><a href="s/36ed0c3b3bca/">60多门编程语言学习书籍超级大合集（700+本PDF）</a> — <code>https://sunjiali.github.io/pan/s/36ed0c3b3bca</code></li>
-<li><a href="s/e7242c58ccd9/">对玄学感兴趣必看的26本书</a> — <code>https://sunjiali.github.io/pan/s/e7242c58ccd9</code></li>
-<li><a href="s/16f599e97017/">完整版合集</a> — <code>https://sunjiali.github.io/pan/s/16f599e97017</code></li>
-<li><a href="s/8e32cafa2e48/">抖音伙伴计划最新玩法</a> — <code>https://sunjiali.github.io/pan/s/8e32cafa2e48</code></li>
-<li><a href="s/9eb71ee5f329/">淘宝拼多多小红书虚拟电商合集</a> — <code>https://sunjiali.github.io/pan/s/9eb71ee5f329</code></li>
-<li><a href="s/acd9043fcae0/">小红书卖秋招表格</a> — <code>https://sunjiali.github.io/pan/s/acd9043fcae0</code></li>
-<li><a href="s/35857c4c76b2/">[某音热舞小姐姐视频16000部]精华版</a> — <code>https://sunjiali.github.io/pan/s/35857c4c76b2</code></li>
-<li><a href="s/f6bfcb365629/">[抖音美女小姐姐视频16000部]</a> — <code>https://sunjiali.github.io/pan/s/f6bfcb365629</code></li>
-<li><a href="s/cfa4cc181146/">体验人生副本动画教学</a> — <code>https://sunjiali.github.io/pan/s/cfa4cc181146</code></li>
-<li><a href="s/af4690b5d4ef/">soul最新玩法-含上百条爆款文案</a> — <code>https://sunjiali.github.io/pan/s/af4690b5d4ef</code></li>
-<li><a href="s/b9c984c70f69/">闲鱼小众玩法，情感咨询赛道完整拆解</a> — <code>https://sunjiali.github.io/pan/s/b9c984c70f69</code></li>
-<li><a href="s/13dea72ee522/">《怎样自学英语》</a> — <code>https://sunjiali.github.io/pan/s/13dea72ee522</code></li>
-<li><a href="s/5c19b5bc0b71/">2026AI微信小程序实战(TRAE)</a> — <code>https://sunjiali.github.io/pan/s/5c19b5bc0b71</code></li>
-<li><a href="s/aa2579dd4f48/">AI工作流+自媒体创作</a> — <code>https://sunjiali.github.io/pan/s/aa2579dd4f48</code></li>
-<li><a href="s/927ca16ad3f8/">老邓电商·淘宝开店运营教程</a> — <code>https://sunjiali.github.io/pan/s/927ca16ad3f8</code></li>
-<li><a href="s/a3a12a9d1aa2/">2026头条AI文章</a> — <code>https://sunjiali.github.io/pan/s/a3a12a9d1aa2</code></li>
-<li><a href="s/d24ba0cffec8/">2025最新出品黑科技工具箱</a> — <code>https://sunjiali.github.io/pan/s/d24ba0cffec8</code></li>
-<li><a href="s/ad59011dabac/">认知提升必备，知乎知识类问答合集(3300多篇)</a> — <code>https://sunjiali.github.io/pan/s/ad59011dabac</code></li>
-<li><a href="s/ac0166680f92/">最全吃瓜大合集</a> — <code>https://sunjiali.github.io/pan/s/ac0166680f92</code></li>
-<li><a href="s/b4be8a777076/">《破局俱乐部》大航海计划</a> — <code>https://sunjiali.github.io/pan/s/b4be8a777076</code></li>
-<li><a href="s/17e1286b6dfd/">少白</a> — <code>https://sunjiali.github.io/pan/s/17e1286b6dfd</code></li>
-<li><a href="s/5a66282dbe5d/">B站网盘拉新美女玩法（2026-06-04版本）</a> — <code>https://sunjiali.github.io/pan/s/5a66282dbe5d</code></li>
-<li><a href="s/2fbc9c783ccc/">一单10米</a> — <code>https://sunjiali.github.io/pan/s/2fbc9c783ccc</code></li>
-<li><a href="s/93f002d29517/">2026搞钱风口，红果漫剧拉新推广全流程实战教学</a> — <code>https://sunjiali.github.io/pan/s/93f002d29517</code></li>
-<li><a href="s/0112ae84217f/">推特网黄合集</a> — <code>https://sunjiali.github.io/pan/s/0112ae84217f</code></li>
-</ol>
+<div class="wrap">
+<header class="top">
+<div class="logo">📦</div>
+<div>
+<h1>资源索引</h1>
+<p class="sub">by Robin（@robin_playbooks）· 共 54 个资源 · 全部永久有效、无需提取码</p>
+</div>
+</header>
+<div class="toolbar">
+<input class="search" id="q" type="search" placeholder="🔍 搜资源名，如：编程 / 小红书 / 英语…" autocomplete="off">
+<div class="chips"><button class="chip on" data-cat="all">全部 54</button><button class="chip" data-cat="ai">🤖 AI 与编程 10</button><button class="chip" data-cat="money">💰 搞钱与运营 17</button><button class="chip" data-cat="video">🎬 影视与娱乐 10</button><button class="chip" data-cat="book">📚 书籍与学习 10</button><button class="chip" data-cat="misc">🧰 工具与合集 7</button></div>
+</div>
+<main id="list">
+<section data-cat="ai"><h2 class="cat">🤖 AI 与编程<span class="n">10 个</span></h2><div class="grid"><div class="card" data-name="2026智能体从0到1系统学习课程"><div class="name">2026智能体从0到1系统学习课程</div><div class="row"><a class="btn" href="s/684716459942/">打开资源</a><button class="btn copy" data-url="https://sunjiali.github.io/pan/s/684716459942">复制链接</button></div></div><div class="card" data-name="openclaw实战100个精品案例"><div class="name">OpenClaw实战100个精品案例</div><div class="row"><a class="btn" href="s/2d6064362cb6/">打开资源</a><button class="btn copy" data-url="https://sunjiali.github.io/pan/s/2d6064362cb6">复制链接</button></div></div><div class="card" data-name="vibe coding零基础ai编程实战课"><div class="name">Vibe Coding零基础AI编程实战课</div><div class="row"><a class="btn" href="s/8e349455bf5e/">打开资源</a><button class="btn copy" data-url="https://sunjiali.github.io/pan/s/8e349455bf5e">复制链接</button></div></div><div class="card" data-name="autoware自动驾驶框架源码剖析与实践"><div class="name">Autoware自动驾驶框架源码剖析与实践</div><div class="row"><a class="btn" href="s/fff3ae440b4c/">打开资源</a><button class="btn copy" data-url="https://sunjiali.github.io/pan/s/fff3ae440b4c">复制链接</button></div></div><div class="card" data-name="deepseek+dify+ollama三剑客"><div class="name">DeepSeek+dify+ollama三剑客</div><div class="row"><a class="btn" href="s/79b32fb3837c/">打开资源</a><button class="btn copy" data-url="https://sunjiali.github.io/pan/s/79b32fb3837c">复制链接</button></div></div><div class="card" data-name="剪映专业版剪辑学习教学课程"><div class="name">剪映专业版剪辑学习教学课程</div><div class="row"><a class="btn" href="s/ffdbd5b7e199/">打开资源</a><button class="btn copy" data-url="https://sunjiali.github.io/pan/s/ffdbd5b7e199">复制链接</button></div></div><div class="card" data-name="60多门编程语言学习书籍超级大合集（700+本pdf）"><div class="name">60多门编程语言学习书籍超级大合集（700+本PDF）</div><div class="row"><a class="btn" href="s/36ed0c3b3bca/">打开资源</a><button class="btn copy" data-url="https://sunjiali.github.io/pan/s/36ed0c3b3bca">复制链接</button></div></div><div class="card" data-name="体验人生副本动画教学"><div class="name">体验人生副本动画教学</div><div class="row"><a class="btn" href="s/cfa4cc181146/">打开资源</a><button class="btn copy" data-url="https://sunjiali.github.io/pan/s/cfa4cc181146">复制链接</button></div></div><div class="card" data-name="2026ai微信小程序实战(trae)"><div class="name">2026AI微信小程序实战(TRAE)</div><div class="row"><a class="btn" href="s/5c19b5bc0b71/">打开资源</a><button class="btn copy" data-url="https://sunjiali.github.io/pan/s/5c19b5bc0b71">复制链接</button></div></div><div class="card" data-name="ai工作流+自媒体创作"><div class="name">AI工作流+自媒体创作</div><div class="row"><a class="btn" href="s/aa2579dd4f48/">打开资源</a><button class="btn copy" data-url="https://sunjiali.github.io/pan/s/aa2579dd4f48">复制链接</button></div></div></div></section><section data-cat="money"><h2 class="cat">💰 搞钱与运营<span class="n">17 个</span></h2><div class="grid"><div class="card" data-name="《生财有术》2025年精华帖合集"><div class="name">《生财有术》2025年精华帖合集</div><div class="row"><a class="btn" href="s/fcbf1f0a10ca/">打开资源</a><button class="btn copy" data-url="https://sunjiali.github.io/pan/s/fcbf1f0a10ca">复制链接</button></div></div><div class="card" data-name="头条傻瓜式抄书玩法"><div class="name">头条傻瓜式抄书玩法</div><div class="row"><a class="btn" href="s/4d01fbdd4857/">打开资源</a><button class="btn copy" data-url="https://sunjiali.github.io/pan/s/4d01fbdd4857">复制链接</button></div></div><div class="card" data-name="5分钟制作一条原创视频"><div class="name">5分钟制作一条原创视频</div><div class="row"><a class="btn" href="s/6697d76abc2d/">打开资源</a><button class="btn copy" data-url="https://sunjiali.github.io/pan/s/6697d76abc2d">复制链接</button></div></div><div class="card" data-name="b站网盘拉新美女玩法(1)"><div class="name">B站网盘拉新美女玩法(1)</div><div class="row"><a class="btn" href="s/359fd9aae3ac/">打开资源</a><button class="btn copy" data-url="https://sunjiali.github.io/pan/s/359fd9aae3ac">复制链接</button></div></div><div class="card" data-name="零成本！中老年情感公众号"><div class="name">零成本！中老年情感公众号</div><div class="row"><a class="btn" href="s/f124c534a9ff/">打开资源</a><button class="btn copy" data-url="https://sunjiali.github.io/pan/s/f124c534a9ff">复制链接</button></div></div><div class="card" data-name="闲鱼搬运神器，一键转卖、上架(1)"><div class="name">闲鱼搬运神器，一键转卖、上架(1)</div><div class="row"><a class="btn" href="s/9c07858604fd/">打开资源</a><button class="btn copy" data-url="https://sunjiali.github.io/pan/s/9c07858604fd">复制链接</button></div></div><div class="card" data-name="小红书小众女粉项目"><div class="name">小红书小众女粉项目</div><div class="row"><a class="btn" href="s/da325c42742d/">打开资源</a><button class="btn copy" data-url="https://sunjiali.github.io/pan/s/da325c42742d">复制链接</button></div></div><div class="card" data-name="小红书运营课"><div class="name">小红书运营课</div><div class="row"><a class="btn" href="s/186c4b86e623/">打开资源</a><button class="btn copy" data-url="https://sunjiali.github.io/pan/s/186c4b86e623">复制链接</button></div></div><div class="card" data-name="抖音伙伴计划最新玩法"><div class="name">抖音伙伴计划最新玩法</div><div class="row"><a class="btn" href="s/8e32cafa2e48/">打开资源</a><button class="btn copy" data-url="https://sunjiali.github.io/pan/s/8e32cafa2e48">复制链接</button></div></div><div class="card" data-name="淘宝拼多多小红书虚拟电商合集"><div class="name">淘宝拼多多小红书虚拟电商合集</div><div class="row"><a class="btn" href="s/9eb71ee5f329/">打开资源</a><button class="btn copy" data-url="https://sunjiali.github.io/pan/s/9eb71ee5f329">复制链接</button></div></div><div class="card" data-name="小红书卖秋招表格"><div class="name">小红书卖秋招表格</div><div class="row"><a class="btn" href="s/acd9043fcae0/">打开资源</a><button class="btn copy" data-url="https://sunjiali.github.io/pan/s/acd9043fcae0">复制链接</button></div></div><div class="card" data-name="soul最新玩法-含上百条爆款文案"><div class="name">soul最新玩法-含上百条爆款文案</div><div class="row"><a class="btn" href="s/af4690b5d4ef/">打开资源</a><button class="btn copy" data-url="https://sunjiali.github.io/pan/s/af4690b5d4ef">复制链接</button></div></div><div class="card" data-name="闲鱼小众玩法，情感咨询赛道完整拆解"><div class="name">闲鱼小众玩法，情感咨询赛道完整拆解</div><div class="row"><a class="btn" href="s/b9c984c70f69/">打开资源</a><button class="btn copy" data-url="https://sunjiali.github.io/pan/s/b9c984c70f69">复制链接</button></div></div><div class="card" data-name="老邓电商·淘宝开店运营教程"><div class="name">老邓电商·淘宝开店运营教程</div><div class="row"><a class="btn" href="s/927ca16ad3f8/">打开资源</a><button class="btn copy" data-url="https://sunjiali.github.io/pan/s/927ca16ad3f8">复制链接</button></div></div><div class="card" data-name="2026头条ai文章"><div class="name">2026头条AI文章</div><div class="row"><a class="btn" href="s/a3a12a9d1aa2/">打开资源</a><button class="btn copy" data-url="https://sunjiali.github.io/pan/s/a3a12a9d1aa2">复制链接</button></div></div><div class="card" data-name="《破局俱乐部》大航海计划"><div class="name">《破局俱乐部》大航海计划</div><div class="row"><a class="btn" href="s/b4be8a777076/">打开资源</a><button class="btn copy" data-url="https://sunjiali.github.io/pan/s/b4be8a777076">复制链接</button></div></div><div class="card" data-name="2026搞钱风口，红果漫剧拉新推广全流程实战教学"><div class="name">2026搞钱风口，红果漫剧拉新推广全流程实战教学</div><div class="row"><a class="btn" href="s/93f002d29517/">打开资源</a><button class="btn copy" data-url="https://sunjiali.github.io/pan/s/93f002d29517">复制链接</button></div></div></div></section><section data-cat="video"><h2 class="cat">🎬 影视与娱乐<span class="n">10 个</span></h2><div class="grid"><div class="card" data-name="坏朋友"><div class="name">坏朋友</div><div class="row"><a class="btn" href="s/5984c9a429b4/">打开资源</a><button class="btn copy" data-url="https://sunjiali.github.io/pan/s/5984c9a429b4">复制链接</button></div></div><div class="card" data-name="完美复制品（2026）美国"><div class="name">完美复制品（2026）美国</div><div class="row"><a class="btn" href="s/442b55df5410/">打开资源</a><button class="btn copy" data-url="https://sunjiali.github.io/pan/s/442b55df5410">复制链接</button></div></div><div class="card" data-name="擦边短剧合集"><div class="name">擦边短剧合集</div><div class="row"><a class="btn" href="s/b785709a7caf/">打开资源</a><button class="btn copy" data-url="https://sunjiali.github.io/pan/s/b785709a7caf">复制链接</button></div></div><div class="card" data-name="知乎推荐的13部神级纪录片"><div class="name">知乎推荐的13部神级纪录片</div><div class="row"><a class="btn" href="s/b2a7156b90fa/">打开资源</a><button class="btn copy" data-url="https://sunjiali.github.io/pan/s/b2a7156b90fa">复制链接</button></div></div><div class="card" data-name="中国318个5a级景区视频讲解+185个航拍"><div class="name">中国318个5A级景区视频讲解+185个航拍</div><div class="row"><a class="btn" href="s/6272a0a53cd6/">打开资源</a><button class="btn copy" data-url="https://sunjiali.github.io/pan/s/6272a0a53cd6">复制链接</button></div></div><div class="card" data-name="[某音热舞小姐姐视频16000部]精华版"><div class="name">[某音热舞小姐姐视频16000部]精华版</div><div class="row"><a class="btn" href="s/35857c4c76b2/">打开资源</a><button class="btn copy" data-url="https://sunjiali.github.io/pan/s/35857c4c76b2">复制链接</button></div></div><div class="card" data-name="[抖音美女小姐姐视频16000部]"><div class="name">[抖音美女小姐姐视频16000部]</div><div class="row"><a class="btn" href="s/f6bfcb365629/">打开资源</a><button class="btn copy" data-url="https://sunjiali.github.io/pan/s/f6bfcb365629">复制链接</button></div></div><div class="card" data-name="最全吃瓜大合集"><div class="name">最全吃瓜大合集</div><div class="row"><a class="btn" href="s/ac0166680f92/">打开资源</a><button class="btn copy" data-url="https://sunjiali.github.io/pan/s/ac0166680f92">复制链接</button></div></div><div class="card" data-name="少白"><div class="name">少白</div><div class="row"><a class="btn" href="s/17e1286b6dfd/">打开资源</a><button class="btn copy" data-url="https://sunjiali.github.io/pan/s/17e1286b6dfd">复制链接</button></div></div><div class="card" data-name="推特网黄合集"><div class="name">推特网黄合集</div><div class="row"><a class="btn" href="s/0112ae84217f/">打开资源</a><button class="btn copy" data-url="https://sunjiali.github.io/pan/s/0112ae84217f">复制链接</button></div></div></div></section><section data-cat="book"><h2 class="cat">📚 书籍与学习<span class="n">10 个</span></h2><div class="grid"><div class="card" data-name="ai赋能职场重塑竞争力线上课"><div class="name">AI赋能职场重塑竞争力线上课</div><div class="row"><a class="btn" href="s/541436d3f73c/">打开资源</a><button class="btn copy" data-url="https://sunjiali.github.io/pan/s/541436d3f73c">复制链接</button></div></div><div class="card" data-name="dk百科全书（560本）"><div class="name">DK百科全书（560本）</div><div class="row"><a class="btn" href="s/35ba85d668e5/">打开资源</a><button class="btn copy" data-url="https://sunjiali.github.io/pan/s/35ba85d668e5">复制链接</button></div></div><div class="card" data-name="[千里共良宵].2004~2020年.全集音频.终极珍藏"><div class="name">[千里共良宵].2004~2020年.全集音频.终极珍藏</div><div class="row"><a class="btn" href="s/68aa58075bfa/">打开资源</a><button class="btn copy" data-url="https://sunjiali.github.io/pan/s/68aa58075bfa">复制链接</button></div></div><div class="card" data-name="2027高中暑期班"><div class="name">2027高中暑期班</div><div class="row"><a class="btn" href="s/46ab4ed43e18/">打开资源</a><button class="btn copy" data-url="https://sunjiali.github.io/pan/s/46ab4ed43e18">复制链接</button></div></div><div class="card" data-name="美国人每天说的话"><div class="name">美国人每天说的话</div><div class="row"><a class="btn" href="s/c23c1895b7a6/">打开资源</a><button class="btn copy" data-url="https://sunjiali.github.io/pan/s/c23c1895b7a6">复制链接</button></div></div><div class="card" data-name="(101gb)全国各地地方志县志4000+本合集"><div class="name">(101GB)全国各地地方志县志4000+本合集</div><div class="row"><a class="btn" href="s/8c0df96cc99b/">打开资源</a><button class="btn copy" data-url="https://sunjiali.github.io/pan/s/8c0df96cc99b">复制链接</button></div></div><div class="card" data-name="风水绝版书110部"><div class="name">风水绝版书110部</div><div class="row"><a class="btn" href="s/3c46a1623cbc/">打开资源</a><button class="btn copy" data-url="https://sunjiali.github.io/pan/s/3c46a1623cbc">复制链接</button></div></div><div class="card" data-name="对玄学感兴趣必看的26本书"><div class="name">对玄学感兴趣必看的26本书</div><div class="row"><a class="btn" href="s/e7242c58ccd9/">打开资源</a><button class="btn copy" data-url="https://sunjiali.github.io/pan/s/e7242c58ccd9">复制链接</button></div></div><div class="card" data-name="《怎样自学英语》"><div class="name">《怎样自学英语》</div><div class="row"><a class="btn" href="s/13dea72ee522/">打开资源</a><button class="btn copy" data-url="https://sunjiali.github.io/pan/s/13dea72ee522">复制链接</button></div></div><div class="card" data-name="认知提升必备，知乎知识类问答合集(3300多篇)"><div class="name">认知提升必备，知乎知识类问答合集(3300多篇)</div><div class="row"><a class="btn" href="s/ad59011dabac/">打开资源</a><button class="btn copy" data-url="https://sunjiali.github.io/pan/s/ad59011dabac">复制链接</button></div></div></div></section><section data-cat="misc"><h2 class="cat">🧰 工具与合集<span class="n">7 个</span></h2><div class="grid"><div class="card" data-name="-完整整理-（尽快保存）"><div class="name">-完整整理-（尽快保存）</div><div class="row"><a class="btn" href="s/e33574070dfe/">打开资源</a><button class="btn copy" data-url="https://sunjiali.github.io/pan/s/e33574070dfe">复制链接</button></div></div><div class="card" data-name="（未命名）"><div class="name">（未命名）</div><div class="row"><a class="btn" href="s/3f3534ac45e4/">打开资源</a><button class="btn copy" data-url="https://sunjiali.github.io/pan/s/3f3534ac45e4">复制链接</button></div></div><div class="card" data-name="potplayer"><div class="name">potplayer</div><div class="row"><a class="btn" href="s/7c0fe5b14067/">打开资源</a><button class="btn copy" data-url="https://sunjiali.github.io/pan/s/7c0fe5b14067">复制链接</button></div></div><div class="card" data-name="完整版合集"><div class="name">完整版合集</div><div class="row"><a class="btn" href="s/16f599e97017/">打开资源</a><button class="btn copy" data-url="https://sunjiali.github.io/pan/s/16f599e97017">复制链接</button></div></div><div class="card" data-name="2025最新出品黑科技工具箱"><div class="name">2025最新出品黑科技工具箱</div><div class="row"><a class="btn" href="s/d24ba0cffec8/">打开资源</a><button class="btn copy" data-url="https://sunjiali.github.io/pan/s/d24ba0cffec8">复制链接</button></div></div><div class="card" data-name="b站网盘拉新美女玩法（2026-06-04版本）"><div class="name">B站网盘拉新美女玩法（2026-06-04版本）</div><div class="row"><a class="btn" href="s/5a66282dbe5d/">打开资源</a><button class="btn copy" data-url="https://sunjiali.github.io/pan/s/5a66282dbe5d">复制链接</button></div></div><div class="card" data-name="一单10米"><div class="name">一单10米</div><div class="row"><a class="btn" href="s/2fbc9c783ccc/">打开资源</a><button class="btn copy" data-url="https://sunjiali.github.io/pan/s/2fbc9c783ccc">复制链接</button></div></div></div></section>
+<div class="empty" id="empty">没找到匹配的资源，换个词试试。</div>
+</main>
+<footer>
+点「打开资源」会跳转到夸克网盘分享页；「复制链接」可把短链发给朋友。<br>
+📊 <a href="stats.html">点击统计</a> · 关注 X：<a href="https://x.com/robin_playbooks">@robin_playbooks</a>
+</footer>
+</div>
+<div id="toast">链接已复制</div>
+<script>
+var q = document.getElementById('q'), empty = document.getElementById('empty'), curCat = 'all';
+function apply(){
+  var kw = q.value.trim().toLowerCase(), any = false;
+  document.querySelectorAll('section[data-cat]').forEach(function(sec){
+    if (curCat !== 'all' && sec.dataset.cat !== curCat) { sec.style.display = 'none'; return; }
+    var vis = 0;
+    sec.querySelectorAll('.card').forEach(function(c){
+      var hit = !kw || c.dataset.name.indexOf(kw) >= 0;
+      c.style.display = hit ? '' : 'none'; if (hit) vis++;
+    });
+    sec.style.display = vis ? '' : 'none'; if (vis) any = true;
+  });
+  empty.style.display = any ? 'none' : 'block';
+}
+q.addEventListener('input', apply);
+document.querySelectorAll('.chip').forEach(function(ch){
+  ch.addEventListener('click', function(){
+    document.querySelectorAll('.chip').forEach(function(x){ x.classList.remove('on'); });
+    ch.classList.add('on'); curCat = ch.dataset.cat; apply();
+  });
+});
+document.querySelectorAll('.copy').forEach(function(b){
+  b.addEventListener('click', function(){
+    var url = b.dataset.url, done = function(){
+      var t = document.getElementById('toast'); t.classList.add('show');
+      setTimeout(function(){ t.classList.remove('show'); }, 1600);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(url).then(done).catch(function(){ fallback(); });
+    } else fallback();
+    function fallback(){
+      var ta = document.createElement('textarea'); ta.value = url;
+      document.body.appendChild(ta); ta.select();
+      try { document.execCommand('copy'); } catch(e) {}
+      document.body.removeChild(ta); done();
+    }
+  });
+});
+</script>
 </body>
 </html>
