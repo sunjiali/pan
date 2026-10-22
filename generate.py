@@ -139,6 +139,19 @@ COVERS = {
     "fd5a0b84880a": "https://img.zhoulanshare.com/watermarked/50f41ee62a64facda3e6c6f9.webp",
     "a0901d6d6fa6": "https://img.zhoulanshare.com/watermarked/32d8ad0b8423297327a2bb3f.webp",
     "dbe2eb37bad7": "https://img.zhoulanshare.com/watermarked/df0a25ad4c75578327b85d9c.webp",
+
+    "4d01fbdd4857": "https://img.zhoulanshare.com/watermarked/ccf01f6bc486b3ab991c8a9a.webp",  # 头条傻瓜式抄书玩法，单号日入破百+保姆级教程
+    "6272a0a53cd6": "https://img.zhoulanshare.com/watermarked/dcd84c47953b327d25609477.webp",  # 一套覆盖中国各省市重点 5A 旅游景区的视频资料，包含详细景
+    "6697d76abc2d": "https://img.zhoulanshare.com/watermarked/f611410f68ca7beeca042289.webp",  # 5分钟制作一条原创视频，多平台分发玩法
+    "8c0df96cc99b": "https://img.zhoulanshare.com/watermarked/75c22840185df02b6c85e2a7.webp",  # 全国各地地方志 县志4000+本合集，全国多版本（收藏级·可
+    "8e32cafa2e48": "https://img.zhoulanshare.com/watermarked/4f42291416d6a8aa644a2237.webp",  # 抖音伙伴计划最新玩法，日入100+
+    "93f002d29517": "https://img.zhoulanshare.com/watermarked/f82a60ec362bbe091059057a.webp",  # 2026搞钱风口，红果漫剧拉新推广全流程实战教学，0粉丝也能
+    "9c07858604fd": "https://img.zhoulanshare.com/watermarked/00ff3ee6fb7d8068d54bfa0a.webp",  # 闲鱼搬运神器，一键转卖、上架
+    "ad59011dabac": "https://img.zhoulanshare.com/watermarked/e5993aa06ac97fcc2b8d0e93.webp",  # 🔥(3300多篇)
+    "b2a7156b90fa": "https://img.zhoulanshare.com/watermarked/fbfe3b47d5ddd10dc6115388.webp",  # 知乎 推荐的13部神级纪录片
+    "b9c984c70f69": "https://img.zhoulanshare.com/watermarked/d9d902eb4347736de1e1a6b8.webp",  # 闲鱼小众玩法，情感咨询赛道完整拆解
+    "fcbf1f0a10ca": "https://img.zhoulanshare.com/watermarked/0732e3667ec507492c1c424a.webp",  # 2025年精华帖合集，社群实战干货+变现案例精选整理
+    "ffdbd5b7e199": "https://img.zhoulanshare.com/watermarked/1012f84e84edd168e07e8375.webp",  # 剪映专业版剪辑学习教学课程
 }
 
 INDEX_CSS = """
