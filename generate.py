@@ -100,7 +100,45 @@ CAT_OF = {
     "46ab4ed43e18": "book", "c23c1895b7a6": "book", "8c0df96cc99b": "book",
     "3c46a1623cbc": "book", "e7242c58ccd9": "book", "13dea72ee522": "book",
     "ad59011dabac": "book",
+    # 2026-10-22 周览批次
+    "d2534cf41410": "ai", "5cc2a29c1d48": "ai",
+    "d257a976557d": "money", "14287837d779": "money",
+    "7082eb169b8d": "video", "0bfed6d34fb7": "video", "6ecf9afcfd6d": "video",
+    "738c9c1e8ddf": "video",
+    "bcf648f7893b": "book", "ef2a188c3d5c": "book", "18d71de1ddfc": "book",
+    "c5b9df3835b1": "book", "3d134b97c065": "book", "ffd5f7562b85": "book",
+    "fd5a0b84880a": "book", "dbe2eb37bad7": "book", "3ee740b7d0a9": "book",
+    "b76be77b54c9": "book", "59e9163754a0": "book", "8ff18cba9c4a": "book",
+    "127849831ea1": "book", "469c508e3794": "book",
     # 工具与其他合集 → misc（默认）
+}
+
+
+# 封面图（来源：zhoulanshare.com 对应条目；老照片/壁纸两条暂未找到，留空）
+COVERS = {
+    "d2534cf41410": "https://img.zhoulanshare.com/watermarked/a760b6b61c71cd1deed6703a.webp",
+    "ef2a188c3d5c": "https://img.zhoulanshare.com/watermarked/4337f1f5841f0cbce6b61db6.webp",
+    "0bfed6d34fb7": "https://pbs.twimg.com/media/HURKKsJa4AE-x4-?format=jpg&name=large",
+    "3ee740b7d0a9": "https://pbs.twimg.com/media/HUL8O9sbIAALcKE?format=png&name=large",
+    "5cc2a29c1d48": "https://pbs.twimg.com/media/HUL-OJpaEAAtJRU?format=jpg&name=large",
+    "b76be77b54c9": "https://pbs.twimg.com/media/HURHwdJbUAANiWQ?format=jpg&name=large",
+    "59e9163754a0": "https://pbs.twimg.com/media/HURK4N_a0AA9pa7?format=jpg&name=large",
+    "6ecf9afcfd6d": "https://pbs.twimg.com/media/HUWPN6tbMAAdzne?format=jpg&name=large",
+    "d257a976557d": "https://pbs.twimg.com/media/HU6LwLCawAAFErU?format=png&name=large",
+    "8ff18cba9c4a": "https://pbs.twimg.com/media/HUlw19WbUAAEaVU?format=jpg&name=large",
+    "127849831ea1": "https://pbs.twimg.com/media/HUgnP0paEAAqkFj?format=jpg&name=large",
+    "469c508e3794": "https://pbs.twimg.com/media/HVEowUHagAAv_i1?format=jpg&name=large",
+    "5c4ebb5c0ec2": "https://pbs.twimg.com/media/HVEltgtbkAAIHui?format=jpg&name=large",
+    "738c9c1e8ddf": "https://pbs.twimg.com/media/HU6MasZasAArUyx?format=jpg&name=large",
+    "14287837d779": "https://pbs.twimg.com/media/HU0-dthbQAEBAEq?format=png&name=large",
+    "18d71de1ddfc": "https://img.zhoulanshare.com/watermarked/da9c40c5e46ed7472c834c52.webp",
+    "c5b9df3835b1": "https://img.zhoulanshare.com/watermarked/c974912346911cffe0ad32fc.webp",
+    "3d134b97c065": "https://img.zhoulanshare.com/watermarked/a8a9473bc923ccfa6cec2f77.webp",
+    "ffd5f7562b85": "https://img.zhoulanshare.com/watermarked/58b8d59624f3dc47d260ba80.webp",
+    "7082eb169b8d": "https://img.zhoulanshare.com/watermarked/d87b9b50d9117dc398569f0f.webp",
+    "fd5a0b84880a": "https://img.zhoulanshare.com/watermarked/50f41ee62a64facda3e6c6f9.webp",
+    "a0901d6d6fa6": "https://img.zhoulanshare.com/watermarked/32d8ad0b8423297327a2bb3f.webp",
+    "dbe2eb37bad7": "https://img.zhoulanshare.com/watermarked/df0a25ad4c75578327b85d9c.webp",
 }
 
 INDEX_CSS = """
@@ -122,6 +160,7 @@ h2.cat{font-size:18px;margin:26px 0 10px;display:flex;align-items:center;gap:8px
 h2.cat .n{font-size:12.5px;color:var(--mut);font-weight:600}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
 .card{border:3px solid var(--line);border-radius:14px;background:var(--card);padding:13px 14px;box-shadow:4px 4px 0 var(--line);display:flex;flex-direction:column;gap:10px}
+.card .cover{width:100%;aspect-ratio:16/10;object-fit:cover;border:2.5px solid var(--line);border-radius:9px;background:#E9E4D4;display:block}
 .card .name{font-weight:800;font-size:15.5px;line-height:1.45;word-break:break-word}
 .card .row{display:flex;gap:8px;margin-top:auto}
 .btn{flex:1;text-align:center;text-decoration:none;border:2.5px solid var(--line);border-radius:9px;padding:7px 0;font-size:13.5px;font-weight:800;color:#16171A;background:var(--matcha);cursor:pointer}
@@ -156,8 +195,11 @@ def index_page(links, with_beacon=True, title="资源索引 · Robin"):
         for name, sid in group:
             esc = html.escape(name)
             short = f"{SITE}/s/{sid}"
+            cover = COVERS.get(sid)
+            img = (f'<img class="cover" src="{html.escape(cover, quote=True)}" alt="" loading="lazy" referrerpolicy="no-referrer">' if cover else '')
             cards.append(
                 f'<div class="card" data-name="{html.escape(name.lower())}">'
+                f'{img}'
                 f'<div class="name">{esc}</div>'
                 f'<div class="row"><a class="btn" href="s/{sid}/">打开资源</a>'
                 f'<button class="btn copy" data-url="{short}">复制链接</button></div></div>'
