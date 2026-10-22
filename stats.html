@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>点击统计</title>
+<style>body{font-family:system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;margin:2em;line-height:1.6;color:#222;max-width:64em}a{color:#0b57d0}table{border-collapse:collapse;width:100%}th,td{border:1px solid #ddd;padding:.45em .6em;text-align:left;vertical-align:top}th{background:#f7f7f7}td.n{text-align:right;font-variant-numeric:tabular-nums}code{background:#f2f2f2;padding:.1em .35em;border-radius:4px;font-size:.85em;word-break:break-all}.muted{color:#666;font-size:.9em}</style>
+</head>
+<body>
+<h1>点击统计</h1>
+<p class="muted">计数来自 Abacus 免费计数服务，自 2026-10-22 本功能上线之日起算；计数为近似值。取不到的条目显示「—」。<a href="index.html">← 返回索引</a></p>
+<p id="summary">正在加载…</p>
+<table>
+<thead><tr><th>资源名</th><th>新链接</th><th>点击数</th><th>原链接</th></tr></thead>
+<tbody id="rows"></tbody>
+</table>
+<script>
+var ENTRIES = [{"name": "坏朋友", "id": "5984c9a429b4"}, {"name": "完美复制品（2026）美国", "id": "442b55df5410"}, {"name": "2026智能体从0到1系统学习课程", "id": "684716459942"}, {"name": "OpenClaw实战100个精品案例", "id": "2d6064362cb6"}, {"name": "Vibe Coding零基础AI编程实战课", "id": "8e349455bf5e"}, {"name": "AI赋能职场重塑竞争力线上课", "id": "541436d3f73c"}, {"name": "Autoware自动驾驶框架源码剖析与实践", "id": "fff3ae440b4c"}, {"name": "DK百科全书（560本）", "id": "35ba85d668e5"}, {"name": "DeepSeek+dify+ollama三剑客", "id": "79b32fb3837c"}, {"name": "-完整整理-（尽快保存）", "id": "e33574070dfe"}, {"name": "[千里共良宵].2004~2020年.全集音频.终极珍藏", "id": "68aa58075bfa"}, {"name": "《生财有术》2025年精华帖合集", "id": "fcbf1f0a10ca"}, {"name": "擦边短剧合集", "id": "b785709a7caf"}, {"name": "头条傻瓜式抄书玩法", "id": "4d01fbdd4857"}, {"name": "5分钟制作一条原创视频", "id": "6697d76abc2d"}, {"name": "2027高中暑期班", "id": "46ab4ed43e18"}, {"name": "B站网盘拉新美女玩法(1)", "id": "359fd9aae3ac"}, {"name": "零成本！中老年情感公众号", "id": "f124c534a9ff"}, {"name": "闲鱼搬运神器，一键转卖、上架(1)", "id": "9c07858604fd"}, {"name": "小红书小众女粉项目", "id": "da325c42742d"}, {"name": "小红书运营课", "id": "186c4b86e623"}, {"name": "知乎推荐的13部神级纪录片", "id": "b2a7156b90fa"}, {"name": "美国人每天说的话", "id": "c23c1895b7a6"}, {"name": "中国318个5A级景区视频讲解+185个航拍", "id": "6272a0a53cd6"}, {"name": "剪映专业版剪辑学习教学课程", "id": "ffdbd5b7e199"}, {"name": "（未命名）", "id": "3f3534ac45e4"}, {"name": "potplayer", "id": "7c0fe5b14067"}, {"name": "(101GB)全国各地地方志县志4000+本合集", "id": "8c0df96cc99b"}, {"name": "风水绝版书110部", "id": "3c46a1623cbc"}, {"name": "60多门编程语言学习书籍超级大合集（700+本PDF）", "id": "36ed0c3b3bca"}, {"name": "对玄学感兴趣必看的26本书", "id": "e7242c58ccd9"}, {"name": "完整版合集", "id": "16f599e97017"}, {"name": "抖音伙伴计划最新玩法", "id": "8e32cafa2e48"}, {"name": "淘宝拼多多小红书虚拟电商合集", "id": "9eb71ee5f329"}, {"name": "小红书卖秋招表格", "id": "acd9043fcae0"}, {"name": "[某音热舞小姐姐视频16000部]精华版", "id": "35857c4c76b2"}, {"name": "[抖音美女小姐姐视频16000部]", "id": "f6bfcb365629"}, {"name": "体验人生副本动画教学", "id": "cfa4cc181146"}, {"name": "soul最新玩法-含上百条爆款文案", "id": "af4690b5d4ef"}, {"name": "闲鱼小众玩法，情感咨询赛道完整拆解", "id": "b9c984c70f69"}, {"name": "《怎样自学英语》", "id": "13dea72ee522"}, {"name": "2026AI微信小程序实战(TRAE)", "id": "5c19b5bc0b71"}, {"name": "AI工作流+自媒体创作", "id": "aa2579dd4f48"}, {"name": "老邓电商·淘宝开店运营教程", "id": "927ca16ad3f8"}, {"name": "2026头条AI文章", "id": "a3a12a9d1aa2"}, {"name": "2025最新出品黑科技工具箱", "id": "d24ba0cffec8"}, {"name": "认知提升必备，知乎知识类问答合集(3300多篇)", "id": "ad59011dabac"}, {"name": "最全吃瓜大合集", "id": "ac0166680f92"}, {"name": "《破局俱乐部》大航海计划", "id": "b4be8a777076"}, {"name": "少白", "id": "17e1286b6dfd"}, {"name": "B站网盘拉新美女玩法（2026-06-04版本）", "id": "5a66282dbe5d"}, {"name": "一单10米", "id": "2fbc9c783ccc"}, {"name": "2026搞钱风口，红果漫剧拉新推广全流程实战教学", "id": "93f002d29517"}, {"name": "推特网黄合集", "id": "0112ae84217f"}];
+var API = "https://abacus.jasoncameron.dev/get/sunjiali-pan/";
+var SITE = "https://sunjiali.github.io/pan/s/", QUARK = "https://pan.quark.cn/s/";
+var tbody = document.getElementById("rows");
+var results = {};
+
+function esc(s){var d=document.createElement("div");d.textContent=s;return d.innerHTML;}
+function render(){
+  var sorted = ENTRIES.slice().sort(function(a,b){
+    var va = results[a.id], vb = results[b.id];
+    if (va == null && vb == null) return 0;
+    if (va == null) return 1;
+    if (vb == null) return -1;
+    return vb - va;
+  });
+  var sum = 0, done = 0;
+  tbody.innerHTML = sorted.map(function(e){
+    var v = results[e.id];
+    if (typeof v === "number") { sum += v; done++; }
+    var shown = v === undefined ? "…" : (v === null ? "—" : String(v));
+    return "<tr><td>" + esc(e.name) + "</td>" +
+      '<td><a href="' + SITE + e.id + '/"><code>' + SITE + e.id + "</code></a></td>" +
+      '<td class="n">' + shown + "</td>" +
+      '<td><a href="' + QUARK + e.id + '"><code>' + QUARK + e.id + "</code></a></td></tr>";
+  }).join("");
+  var idx = results["__index"];
+  document.getElementById("summary").textContent =
+    "已加载 " + done + " / " + ENTRIES.length + " 条，链接点击合计 " + sum + " 次" +
+    (typeof idx === "number" ? "；索引页访问 " + idx + " 次。" : "。");
+}
+function getOne(id, retry){
+  return fetch(API + encodeURIComponent(id)).then(function(r){
+    if (!r.ok) throw new Error(r.status);
+    return r.json();
+  }).then(function(j){
+    results[id] = (typeof j.value === "number") ? j.value : null;
+  }).catch(function(){
+    if (!retry) return new Promise(function(res){ setTimeout(res, 1200); }).then(function(){ return getOne(id, true); });
+    results[id] = null;
+  });
+}
+function loadAll(){
+  var i = 0;
+  function batch(){
+    var slice = ENTRIES.slice(i, i + 6); i += 6;
+    if (!slice.length) { render(); return; }
+    Promise.all(slice.map(function(e){ return getOne(e.id, false); })).then(function(){
+      render();
+      setTimeout(batch, 250);
+    });
+  }
+  render(); batch();
+  fetch(API + "index-total").then(function(r){ return r.json(); }).then(function(j){
+    if (typeof j.value === "number") { results["__index"] = j.value; render(); }
+  }).catch(function(){});
+}
+loadAll();
+</script>
+</body>
+</html>
